@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Round Timer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top-bar">
+      <div class="top-bar-title">Speech Timer</div>
+      <button type="button" id="btnOpenSettings" class="top-bar-settings">⚙︎</button>
+    </header>
+
+    <div class="main-split">
+
+      <!-- LEFT SIDE -->
+      <section class="timer-left">
+        <input
+          type="text"
+          id="timerInput"
+          class="timer-input"
+          value="10:00"
+          placeholder="10:00"
+          inputmode="numeric"
+          autocomplete="off"
+        />
+
+        <div class="timer-controls">
+          <button type="button" id="btnStart">Start</button>
+          <button type="button" id="btnPause">Pause</button>
+          <button type="button" id="btnReset">Reset</button>
+        </div>
+
+        <div class="signal-fields">
+          <label id="signalField2">
+            <input type="text" id="signal2" placeholder="M:SS" />
+            <span>2</span>
+          </label>
+
+          <label id="signalField1">
+            <input type="text" id="signal1" placeholder="M:SS" />
+            <span>1</span>
+          </label>
+
+          <label id="signalFieldHook">
+            <input type="text" id="signalHook" placeholder="M:SS" />
+            <span>🪝</span>
+          </label>
+
+          <label id="signalFieldFist">
+            <input type="text" id="signalFist" placeholder="M:SS" />
+            <span>✊</span>
+          </label>
+
+          <label id="signalFieldRaisedFist">
+            <input type="text" id="signalRaisedFist" placeholder="M:SS" />
+            <span>✊⬆</span>
+          </label>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-left">Made by William Stella</div>
+      </section>
+
+      <!-- RIGHT SIDE -->
+      <section class="instructor-right">
+        <div id="bigSignal" class="big-signal">—</div>
+      </section>
+
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="settings-overlay" id="settingsOverlay">
+      <div class="settings-panel">
+        <div class="settings-header">
+          <h2>Settings</h2>
+          <button type="button" id="btnCloseSettings">✕</button>
+        </div>
+
+        <label class="settings-row">
+          <input type="checkbox" id="toggleSignal2" checked />
+          <span>2 fingers</span>
+        </label>
+
+        <label class="settings-row">
+          <input type="checkbox" id="toggleSignal1" checked />
+          <span>1 finger</span>
+        </label>
+
+        <label class="settings-row">
+          <input type="checkbox" id="toggleSignalHook" checked />
+          <span>Hook</span>
+        </label>
+
+        <label class="settings-row">
+          <input type="checkbox" id="toggleSignalFist" checked />
+          <span>Fist</span>
+        </label>
+
+        <label class="settings-row">
+          <input type="checkbox" id="toggleSignalRaisedFist" checked />
+          <span>Raised Fist</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
